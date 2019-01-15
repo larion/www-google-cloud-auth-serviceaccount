@@ -1,8 +1,9 @@
-lib/WWW/Google/Cloud/Auth/ServiceAccount
+lib/WWW/Google/Cloud/Auth/ServiceAccount.pm
 Makefile.PL
 MANIFEST.SKIP
 MANIFEST			This list of files
 README
-t/100-api.t
+t/100-serviceaccount.t
 t/pod_coverage.t
 t/pod.t
+t/data/test_creds.json
