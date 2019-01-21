@@ -10,7 +10,7 @@ use JSON;
 use LWP::UserAgent;
 use Crypt::JWT qw(encode_jwt);
 
-use version; our $VERSION = version->declare('v1.0.0');
+use version; our $VERSION = version->declare('v1.0.1');
 
 has credentials_path => (
     isa      => 'Str',
