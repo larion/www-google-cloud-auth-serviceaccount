@@ -17,4 +17,15 @@ WriteMakefile(
         'Carp'                      => 0,
         'Crypt::JWT'                => 0,
     },
+	(eval { ExtUtils::MakeMaker->VERSION(6.46) } ? (META_MERGE => {
+      'meta-spec' => { version => 2 },
+      resources => {
+          repository => {
+              type => 'git',
+              url  => 'https://github.com/larion/www-google-cloud-auth-serviceaccount.git',
+              web  => 'https://github.com/larion/www-google-cloud-auth-serviceaccount'
+          },
+      }})
+   : ()
+   ),
 );
