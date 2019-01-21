@@ -6,7 +6,6 @@ use MooseX::StrictConstructor;
 use namespace::autoclean;
 
 use Carp;
-use File::Slurp;
 use JSON;
 use LWP::UserAgent;
 use Crypt::JWT qw(encode_jwt);
@@ -82,7 +81,9 @@ sub _build_ua {
 
 sub _generate_jwt {
     my $self = shift;
-    my $creds = JSON::decode_json(read_file($self->credentials_path));
+    open (my $fh, '<', $self->credentials_path) or die("Can't open credentials file: $!");
+    my $creds_json = do {local $/; <$fh>};
+    my $creds      = JSON::decode_json($creds_json);
     my $payload = {
         iss => $creds->{client_email},
         scope => $self->scope,
