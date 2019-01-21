@@ -207,7 +207,7 @@ This module is written by Larion Garaczi <larion@cpan.org> (2019)
 
 =head1 SOURCE CODE
 
-The source code for this module is hosted on GitHub L<https://github.com/larion/www-google-cloud-auth>.
+The source code for this module is hosted on GitHub L<https://github.com/larion/www-google-cloud-auth-serviceaccount>.
 
 Feel free to contribute :)
 
